@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+Style Stolen from https://codepen.io/Gi_18/pen/xwVJKg
+-->
+<html>
+    <head>
+        <title>Twitter Knock-off</title>
+        <link rel="stylesheet" type="text/css" href="cssRef.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+
+    <body>
+        <!--div>TODO write content</div-->
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <!--a href="#"><img class="img-responsive" alt="" src="http://placehold.it/800x500"></a-->
+                            USER
+                            <div id ="Address1">
+                                <small> Address: </small>
+                            </div>
+                            <div id ="Name1">
+                                Name:
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3" >
+                                    <h5>
+                                        <small>TWEETS</small>
+                                        <a href="#" id="numTweets">0</a>
+                                    </h5>
+                                </div>
+                                <div class="col-xs-4">
+                                    <h5>
+                                        <small>FOLLOWING</small>
+                                        <a href="#" id="numFollowing">0</a>
+                                    </h5>
+                                </div>
+                                <div class="col-xs-5">
+                                    <h5>
+                                        <small>FOLLOWERS</small>
+                                        <a href="#" id="numFollowers">0</a>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PUT SEARCH HERE -->
+                    <div>
+                        SEARCH BY USER ADDRESS
+                        <input type="text" id="UserSearch" value ="">
+                        <input type="button" id="UserSearchButton" value="Search"  disabled>
+                    </div>
+                    <div>
+                        SEARCH BY HASH TAG (include the "#")
+                        <input type="text" id="HashTagSearch" value ="">
+                        <input type="button" id="HashTagSearchButton" value="Search"  disabled>
+                    </div>
+
+                </div>
+                <div class="col-sm-6">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="media">
+                                <a class="media-left" href="#fake">
+                                    <img alt="" class="media-object img-rounded" src="http://placehold.it/35x35">
+                                </a>
+                                <div class="media-body">                                                    
+                                    <div class="form-group has-feedback">
+
+                                        <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
+                                        <input type="text" class="form-control" id="postText" aria-describedby="search">
+                                        <span class="glyphicon glyphicon-camera form-control-feedback" aria-hidden="true"></span>
+                                        <span id="postText" class="sr-only">(success)</span>
+                                    </div>
+                                    <input type="button" id="PostButton" value="POST"  disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="media" id="TWT1">
+                                <a class="media-left" href="#fake">
+                                    <img alt="" class="media-object img-rounded" src="http://placehold.it/64x64">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading" id="UN1"> </h4>
+                                    <p id="TXT1"> </p>
+                                    <ul class="nav nav-pills nav-pills-custom">
+                                        <li><a href="#"><span class="glyphicon glyphicon-share-alt"></span></a></li>
+                                        <li><a href="#"><span class="glyphicon glyphicon-retweet"></span></a></li>
+                                        <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+                                        <li><a href="#"><span class="glyphicon glyphicon-option-horizontal"></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="media" id="TWT2">
+                                <a class="media-left" href="#fake">
+                                    <img alt="" class="media-object img-rounded" src="http://placehold.it/64x64">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading" id="UN2"></h4>
+                                    <p id="TXT2"></p>
+                                    <ul class="nav nav-pills nav-pills-custom">
+                                        <li><a href="#"><span class="glyphicon glyphicon-share-alt"></span></a></li>
+                                        <li><a href="#"><span class="glyphicon glyphicon-retweet"></span></a></li>
+                                        <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+                                        <li><a href="#"><span class="glyphicon glyphicon-option-horizontal"></span></a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="media" id="TWT3">
+                                <a class="media-left" href="#fake">
+                                    <img alt="" class="media-object img-rounded" src="http://placehold.it/64x64">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading" id="UN3"></h4>
+                                    <p id="TXT3"></p>
+                                    <ul class="nav nav-pills nav-pills-custom">
+                                        <li><a href="#"><span class="glyphicon glyphicon-share-alt"></span></a></li>
+                                        <li><a href="#"><span class="glyphicon glyphicon-retweet"></span></a></li>
+                                        <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+                                        <li><a href="#"><span class="glyphicon glyphicon-option-horizontal"></span></a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="media" id="TWT4">
+                                <a class="media-left" href="#fake">
+                                    <img alt="" class="media-object img-rounded" src="http://placehold.it/64x64">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading" id="UN4"></h4>
+                                    <p id="TXT4"></p>
+                                    <ul class="nav nav-pills nav-pills-custom">
+                                        <li><a href="#"><span class="glyphicon glyphicon-share-alt"></span></a></li>
+                                        <li><a href="#"><span class="glyphicon glyphicon-retweet"></span></a></li>
+                                        <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+                                        <li><a href="#"><span class="glyphicon glyphicon-option-horizontal"></span></a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="media" id="TWT5">
+                                <a class="media-left" href="#fake">
+                                    <img alt="" class="media-object img-rounded" src="http://placehold.it/64x64">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading" id="UN5"></h4>
+                                    <p id="TXT5"></p>
+                                    <ul class="nav nav-pills nav-pills-custom">
+                                        <li><a href="#"><span class="glyphicon glyphicon-share-alt"></span></a></li>
+                                        <li><a href="#"><span class="glyphicon glyphicon-retweet"></span></a></li>
+                                        <li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+                                        <li><a href="#"><span class="glyphicon glyphicon-option-horizontal"></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+                    <br>
+
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Menu</div>
+                        <div class="panel-body">
+                            <ul class="nav nav-pills">
+                                <li role="presentation" class="active"><a href="#">Home</a></li>
+                                <li role="presentation"><a href="#">Profile</a></li>
+                                <li role="presentation"><a href="#">Messages</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="panel panel-default panel-custom">
+                        <div class="panel-heading">
+                            <h3 class="panel-title" id ="ProfileTitle">                                            
+                                No Profile for this Address                                            
+                                <!--small><a href="#">Refresh</a> ● <a href="#">View all</a></small-->
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="media">
+                                <h4 class="media-heading">Current Address: </h4>
+                                <div id="Address2">
+                                    <small> 0x224343223523.....</small>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <h4 class="media-heading">USER NAME:</h4>
+                                <div id ="Name2">
+                                    <input type="text" id="UserName" value ="null">
+                                </div>
+                            </div>
+                            <div class="media">
+
+                                <div class="media-body">
+                                    <h4 class="media-heading">Create Profile / Change User Name</h4>
+                                    <input type="button" id="ChangeButton" value="Create/Change"  disabled>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- PUT TRENDS HERE-->
+                    <div class="panel panel-default panel-custom">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Trends						
+                            </h3>
+                        </div>
+
+                        <div class="panel-body">
+                            <ul class="list-unstyled">
+                                <li><a href="#">#Trend1</a></li>
+                                <li><a href="#">#Trend2</a></li>
+                                <li><a href="#">#Trend3</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="ethjs.js"></script> 
+        <script>
+            var web3Provider;
+
+            const MAXCHAR = 128;
+            const MAX_DISP_TWEET = 5;
+            var currentUser;
+            
+            var tPost = {
+                poster: "",
+                text: "",
+                address: ""
+                // add picture and hash tags later
+            };
+            var allPosts = []; // Lazy. Make global
+
+            window.onload = function () {
+                setup();
+            }; 
+
+            function setup() {
+                // Define Buttons
+                PostButton = document.getElementById("PostButton");
+                UserSearchButton = document.getElementById("UserSearchButton");
+                HashTagSearchButton = document.getElementById("HashTagSearchButton");
+                ChangeButton = document.getElementById("ChangeButton");
+                // Define Inputs
+                UserSearch = document.getElementById("UserSearch");
+                HashTagSearch = document.getElementById("HashTagSearch");
+                PostText = document.getElementById("postText");
+                UserName = document.getElementById("UserName");
+                // Define Text Fields (innerHTML)
+                Address1 = document.getElementById("Address1");
+                Address2 = document.getElementById("Address2");
+                Name1 = document.getElementById("Name1");
+                Name2 = document.getElementById("Name2");
+                NumTweets = document.getElementById("numTweets");
+                NumFollowers = document.getElementById("numFollowers");
+                NumFollowing = document.getElementById("numFollowing");
+                ProfileTitle = document.getElementById("ProfileTitle");
+                // Tweet Spots
+                TXT1 = document.getElementById("TXT1");
+                TXT2 = document.getElementById("TXT2");
+                TXT3 = document.getElementById("TXT3");
+                TXT4 = document.getElementById("TXT4");
+                TXT5 = document.getElementById("TXT5");
+                UN1 = document.getElementById("UN1");
+                UN2 = document.getElementById("UN2");
+                UN3 = document.getElementById("UN3");
+                UN4 = document.getElementById("UN4");
+                UN5 = document.getElementById("UN5");
+                TWT1 = document.getElementById("TWT1"); TWT1.style.visibility='hidden';
+                TWT2 = document.getElementById("TWT2"); TWT2.style.visibility='hidden';
+                TWT3 = document.getElementById("TWT3"); TWT3.style.visibility='hidden';
+                TWT4 = document.getElementById("TWT4"); TWT4.style.visibility='hidden';
+                TWT5 = document.getElementById("TWT5"); TWT5.style.visibility='hidden';
+                TWT1.style.visibility='hidden';
+                // Setup Variables                
+                currentUser = "";
+                // Start Web3 App                
+                initWeb3();
+            }
+
+            function updateAccounts(add) {
+                Address1.innerHTML = "Address:" + add;
+                Address2.innerHTML = add;
+            }
+
+            function web3StringToBytes32(text) {
+                var result = web3.fromAscii(text, 32);
+                return result;
+            }
+
+            function initWeb3() {
+
+                if (typeof web3 !== 'undefined') {
+                    // If a web3 instance is already provided by Meta Mask.
+                    web3Provider = web3.currentProvider;
+                    web3 = new Web3(web3.currentProvider);
+                    web3Provider = new Web3.providers.HttpProvider('http://localhost:8545');// Force it here. Not working otherwise
+                } else {
+                    // Specify default instance if no web3 instance provided
+                    web3Provider = new Web3.providers.HttpProvider('http://localhost:8545');
+                    web3 = new Web3(web3Provider);
+                }
+                var eth = new Eth(web3Provider); // OK WORKS                
+
+                var TWTRABI = [{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"uint256"}],"name":"UserPostMap","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"postNum","type":"uint256"},{"name":"HTag","type":"bytes32"}],"name":"getPostByHashtag","outputs":[{"name":"","type":"string"},{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_Name","type":"string"}],"name":"MakeUser","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"TWTRPosts","outputs":[{"name":"author","type":"address"},{"name":"message","type":"string"},{"name":"reTWTR","type":"bool"},{"name":"orgTWTR","type":"string"},{"name":"truncated","type":"bool"},{"name":"ID","type":"uint256"},{"name":"IPFSMediaLink","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"mesg","type":"string"},{"name":"tags","type":"bytes32[]"},{"name":"IPFSLink","type":"string"},{"name":"_reTWTR","type":"bool"},{"name":"_orgTWTR","type":"string"}],"name":"MakePost","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"postNum","type":"uint256"},{"name":"TargetUser","type":"address"}],"name":"getPostByUser","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"TargetTag","type":"bytes32"}],"name":"getNumTagPosts","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"TargetUser","type":"address"}],"name":"getNameByAddress","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"TargetUser","type":"address"}],"name":"getNumUserPosts","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"Users","outputs":[{"name":"UserID","type":"address"},{"name":"addressIsUsed","type":"bool"},{"name":"TWTRName","type":"string"},{"name":"TwitterLink","type":"string"},{"name":"IPFSPhotoLink","type":"string"},{"name":"numUserPosts","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"bytes32"},{"name":"","type":"uint256"}],"name":"HashTagMap","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":false,"name":"mesg","type":"string"}],"name":"TestEvent","type":"event"}];
+                var TWTRBytecode = '0x608060405260008054600160a060020a0319163317905534801561002257600080fd5b5060006001556115e2806100376000396000f3006080604052600436106100ae5763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166306812b0f81146100b35780631cdd23fd146100e957806336bfc602146101955780634769adc8146101f05780635b61974114610382578063665010451461049857806374f7d3ea146105315780637c80bb4f146105495780638e6b27ee1461056a57806399b956a01461058b578063c0f954071461071b575b600080fd5b3480156100bf57600080fd5b506100d7600160a060020a0360043516602435610736565b60408051918252519081900360200190f35b3480156100f557600080fd5b50610104600435602435610766565b604051808060200183600160a060020a0316600160a060020a03168152602001828103825284818151815260200191508051906020019080838360005b83811015610159578181015183820152602001610141565b50505050905090810190601f1680156101865780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b3480156101a157600080fd5b506040805160206004803580820135601f81018490048402850184019095528484526101ee9436949293602493928401919081908401838280828437509497506108689650505050505050565b005b3480156101fc57600080fd5b506102086004356109f2565b6040518088600160a060020a0316600160a060020a03168152602001806020018715151515815260200180602001861515151581526020018581526020018060200184810384528a818151815260200191508051906020019080838360005b8381101561027f578181015183820152602001610267565b50505050905090810190601f1680156102ac5780820380516001836020036101000a031916815260200191505b5084810383528851815288516020918201918a019080838360005b838110156102df5781810151838201526020016102c7565b50505050905090810190601f16801561030c5780820380516001836020036101000a031916815260200191505b50848103825285518152855160209182019187019080838360005b8381101561033f578181015183820152602001610327565b50505050905090810190601f16801561036c5780820380516001836020036101000a031916815260200191505b509a505050505050505050505060405180910390f35b34801561038e57600080fd5b506040805160206004803580820135601f81018490048402850184019095528484526101ee943694929360249392840191908190840183828082843750506040805187358901803560208181028481018201909552818452989b9a99890198929750908201955093508392508501908490808284375050604080516020601f89358b018035918201839004830284018301909452808352979a99988101979196509182019450925082915084018382808284375050604080516020601f818a01358b0180359182018390048302840183018552818452989b8a3515159b909a909994019750919550918201935091508190840183828082843750949750610bdf9650505050505050565b3480156104a457600080fd5b506104bc600435600160a060020a0360243516610e8d565b6040805160208082528351818301528351919283929083019185019080838360005b838110156104f65781810151838201526020016104de565b50505050905090810190601f1680156105235780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561053d57600080fd5b506100d7600435610ff5565b34801561055557600080fd5b506104bc600160a060020a0360043516611007565b34801561057657600080fd5b506100d7600160a060020a03600435166110e6565b34801561059757600080fd5b506105ac600160a060020a0360043516611157565b6040518087600160a060020a0316600160a060020a0316815260200186151515158152602001806020018060200180602001858152602001848103845288818151815260200191508051906020019080838360005b83811015610619578181015183820152602001610601565b50505050905090810190601f1680156106465780820380516001836020036101000a031916815260200191505b50848103835287518152875160209182019189019080838360005b83811015610679578181015183820152602001610661565b50505050905090810190601f1680156106a65780820380516001836020036101000a031916815260200191505b50848103825286518152865160209182019188019080838360005b838110156106d95781810151838201526020016106c1565b50505050905090810190601f1680156107065780820380516001836020036101000a031916815260200191505b50995050505050505050505060405180910390f35b34801561072757600080fd5b506100d760043560243561133b565b60046020528160005260406000208181548110151561075157fe5b90600052602060002001600091509150505481565b600081815260056020526040812054606091908190151561078657600080fd5b60008481526005602052604090208054869081106107a057fe5b600091825260208083209091015480835260028083526040938490208054600191820180548751601f60001995831615610100029590950190911694909404928301869004860284018601909652818352929550600160a060020a0390921692909184918301828280156108555780601f1061082a57610100808354040283529160200191610855565b820191906000526020600020905b81548152906001019060200180831161083857829003601f168201915b5050505050915092509250509250929050565b3360008181526003602052604090205460a060020a900460ff161561088c57600080fd5b600e805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03831617905581516108c790600f906020850190611356565b50600e805474ff00000000000000000000000000000000000000001990811660a060020a90811780845560006014819055600160a060020a03808716825260036020526040909120805473ffffffffffffffffffffffffffffffffffffffff19169190921617808255845483900460ff16151590920291909216178155600f805461096a91600184810192600260001992821615610100029290920116046113d4565b506002828101805461097f9284019190611449565b50600382810180546109949284019190611449565b50600482018160040190805460018160011615610100020316600290046109bc9291906113d4565b50600582018160050190805460018160011615610100020316600290046109e49291906113d4565b506006918201549101555050565b6002602081815260009283526040928390208054600180830180548751601f60001994831615610100029490940190911696909604918201859004850286018501909652808552600160a060020a0390911694919392830182828015610a995780601f10610a6e57610100808354040283529160200191610a99565b820191906000526020600020905b815481529060010190602001808311610a7c57829003601f168201915b505050506002838101546003850180546040805160206101006001851615026000190190931695909504601f8101839004830286018301909152808552959660ff90931695929450909190830182828015610b355780601f10610b0a57610100808354040283529160200191610b35565b820191906000526020600020905b815481529060010190602001808311610b1857829003601f168201915b505050506004830154600584015460078501805460408051602060026101006001861615026000190190941693909304601f8101849004840282018401909252818152969760ff9095169693955090830182828015610bd55780601f10610baa57610100808354040283529160200191610bd5565b820191906000526020600020905b815481529060010190602001808311610bb857829003601f168201915b5050505050905087565b33600081815260036020526040812054819060a060020a900460ff161515610c0657600080fd5b608088511115610c1557600080fd5b600a87511115610c2457600080fd5b600091505b8651821015610c5c5760388783815181101515610c4257fe5b505060201115610c5157600080fd5b600190910190610c29565b6006805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0385161790558751610c979060079060208b0190611356565b508651610cab90600c9060208a01906114b3565b506008805460ff19168615151790558351610ccd906009906020870190611356565b50600160a060020a03808416600090815260036020908152604080832060069081018054600190810190915580548552600293849052919093208354815473ffffffffffffffffffffffffffffffffffffffff1916951694909417845560078054939493610d4e9385840193600019908316156101000201909116046113d4565b50600282810154828201805460ff191660ff909216151591909117905560038084018054610d90939285019261010060018316150260001901909116046113d4565b50600482810154908201805460ff191660ff90921615159190911790556005808301549082015560068083018054610dcb92840191906114f0565b5060078201816007019080546001816001161561010002031660029004610df39291906113d4565b50505050600160a060020a038216600090815260046020908152604082206001805482549182018355918452918320909101555b8651811015610e7b57600560008883815181101515610e4257fe5b60209081029091018101518252818101929092526040016000908120600180548254808301845592845293909220019190915501610e27565b50506001805481019055505050505050565b600160a060020a0381166000908152600360205260408120546060919060a060020a900460ff161515610ebf57600080fd5b600160a060020a038316600090815260036020526040902060060154841115610ee757600080fd5b600160a060020a038316600090815260046020526040902054841115610f0c57600080fd5b600160a060020a0383166000908152600460205260409020805485908110610f3057fe5b90600052602060002001549050600260008281526020019081526020016000206001018054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610fe75780601f10610fbc57610100808354040283529160200191610fe7565b820191906000526020600020905b815481529060010190602001808311610fca57829003601f168201915b505050505091505092915050565b60009081526005602052604090205490565b600160a060020a03811660009081526003602052604090205460609060a060020a900460ff16151561103857600080fd5b600160a060020a038216600090815260036020908152604091829020600190810180548451600293821615610100026000190190911692909204601f8101849004840283018401909452838252909290918301828280156110da5780601f106110af576101008083540402835291602001916110da565b820191906000526020600020905b8154815290600101906020018083116110bd57829003601f168201915b50505050509050919050565b600160a060020a03811660009081526003602052604081205460a060020a900460ff16151561111457600080fd5b600160a060020a038216600090815260036020526040902060060154151561113b57600080fd5b50600160a060020a031660009081526004602052604090205490565b6003602090815260009182526040918290208054600180830180548651600261010094831615949094026000190190911692909204601f8101869004860283018601909652858252600160a060020a0383169560a060020a90930460ff16949192909183018282801561120b5780601f106111e05761010080835404028352916020019161120b565b820191906000526020600020905b8154815290600101906020018083116111ee57829003601f168201915b5050505060048301805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815294959493509083018282801561129b5780601f106112705761010080835404028352916020019161129b565b820191906000526020600020905b81548152906001019060200180831161127e57829003601f168201915b5050505060058301805460408051602060026001851615610100026000190190941693909304601f810184900484028201840190925281815294959493509083018282801561132b5780601f106113005761010080835404028352916020019161132b565b820191906000526020600020905b81548152906001019060200180831161130e57829003601f168201915b5050505050908060060154905086565b60056020528160005260406000208181548110151561075157fe5b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061139757805160ff19168380011785556113c4565b828001600101855582156113c4579182015b828111156113c45782518255916020019190600101906113a9565b506113d092915061152f565b5090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061140d57805485556113c4565b828001600101855582156113c457600052602060002091601f016020900482015b828111156113c457825482559160010191906001019061142e565b8280548282559060005260206000209081019282156114a75760005260206000209182015b828111156114a757828290805460018160011615610100020316600290046114979291906113d4565b509160010191906001019061146e565b506113d092915061154c565b8280548282559060005260206000209081019282156113c4579160200282015b828111156113c457825182556020909201916001909101906114d3565b8280548282559060005260206000209081019282156113c4576000526020600020918201828111156113c457825482559160010191906001019061142e565b61154991905b808211156113d05760008155600101611535565b90565b61154991905b808211156113d0576000611566828261156f565b50600101611552565b50805460018160011615610100020316600290046000825580601f1061159557506115b3565b601f0160209004906000526020600020908101906115b3919061152f565b505600a165627a7a72305820c1f703ac6f94a46e29453fd20796e995fa5fdefa598702fade8bfdc57f90cca00029'; 
+
+                eth.accounts().then(function (accounts) {
+                    var activeAccount = accounts[0];
+                    TWTRContract = eth.contract(TWTRABI, TWTRBytecode, {from: accounts[0], gas: 5000000});
+                    // MAIN CODE HERE
+                    TWTRContract.new(function (deployError, deployTxHash) {
+                        if (deployError) {
+                            alert("error: " + String(deployError));
+                        }
+                        // Replace this whole Interval thing with one Async() Function
+                        var checkTransaction = setInterval(function () {
+                            eth.getTransactionReceipt(deployTxHash).then(function (receipt) {
+                                if (receipt) {
+                                    clearInterval(checkTransaction);
+                                    TWTRInstance = TWTRContract.at(receipt.contractAddress);
+                                    // ADD SEQUENCE OF THINGS TO HAPPEN EACH TIME initWeb3 is called
+                                    ChangeButton.disabled = false;
+                                    UserSearchButton.disabled = false;
+                                    HashTagSearchButton.disabled = false;
+                                    PostButton.disabled = false;
+                                    //Update account
+
+                                    updateAccounts(activeAccount);
+                                    // Add Listeners                                   
+                                    ChangeButton.addEventListener('click', function () {
+                                        if (UserName.value !== "") {
+                                            TWTRInstance.MakeUser(UserName.value).then(function () {
+                                                //Name1.innerHTML = "Name: " + UserName.value;                                                
+                                                // Below, just test to verify that name account is properly set
+                                                TWTRInstance.getNameByAddress(accounts[0]).then(function (res) {
+
+                                                    var nameGet = res[0];
+                                                    Name1.innerHTML = nameGet;
+                                                    currentUser = nameGet;
+                                                    ProfileTitle.innerHTML = "User "+currentUser + " logged in";
+                                                });
+                                            });
+                                        }
+                                    });
+
+                                    PostButton.addEventListener('click', function () {
+                                        postString = PostText.value;
+                                        // make sure name and account are set up
+                                        if (currentUser === "") {
+                                            alert("Cannot Post: User Not Set Up");
+                                            return;
+                                        }
+                                        // make sure post is not empty
+                                        if (postString.length < 1) {
+                                            alert("Cannot Post: No Text");
+                                            return;
+                                        }
+                                        // Cannot start with hash tag
+                                        firstHashTag = postString.indexOf("#");
+                                        if (!firstHashTag) { // No hash tags
+                                            firstHashTag = postString.length;
+                                        }
+
+                                        if (firstHashTag < 2) {
+                                            alert("Cannot Post: Text before Hash Tag");
+                                            return;
+                                        }
+                                        // make sure post is under the character limit
+                                        if (postString.length > MAXCHAR) {
+                                            postString = postString.substring(0, MAXCHAR);
+                                            alert("Post exceeds " + MAXCHAR + " characters. Will be truncated.");
+                                        }
+                                        // parse out hash tags from post to send separately
+
+                                        postLength = postString.length;
+                                        postText = postString.substring(0, firstHashTag);
+
+                                        if (firstHashTag < postLength) { // Have hash tags
+                                            hashTagText = postString.substring(firstHashTag, postLength);
+                                            hashTagTextLength = hashTagText.length;
+                                            var hashTagStarts = [];
+                                            hashTagStarts[0] = 0;
+                                            var hashTagEnds = [];
+                                            var inTag = true;
+                                            for (i = 1; i < hashTagTextLength; i++) { // Start at 1 because we know index 0 is #
+                                                x = hashTagText.charAt(i);
+                                                if (inTag && (x === " " || x === "#")) {
+                                                    hashTagEnds.push(i);
+                                                    inTag = false;
+                                                }
+                                                if (inTag && (i === (hashTagTextLength - 1))) {
+                                                    hashTagEnds.push(i + 1);
+                                                    inTag = false;
+                                                }
+                                                if (!inTag && (x === "#" && i !== (hashTagTextLength - 1) && i !== (hashTagTextLength))) {
+                                                    hashTagStarts.push(i);
+                                                    inTag = true;
+                                                }
+
+                                            }
+
+                                            if (hashTagStarts.length !== hashTagEnds.length) {
+                                                alert("Error Processing HashTags");
+                                                return;
+                                            }
+          
+                                            var allHashTags = [];
+                                            for (i = 0; i < hashTagEnds.length; i++) {
+                                                currentTag = hashTagText.substring(hashTagStarts[i], hashTagEnds[i]);
+                                                allHashTags.push(web3StringToBytes32(currentTag));
+                                            }
+
+                                        } else {
+                                            var allHashTags = []; // null
+                                        }
+                                        // call MakePost
+                                        TWTRInstance.MakePost(postString, allHashTags, "", false, "").then(function () {
+                                            alert("Post Successful");
+                                            thisTPost = new Object();
+                                            thisTPost.address = accounts[0];
+                                            thisTPost.text = postString;
+                                            allPosts.unshift(thisTPost);
+                                            updateFeed();
+                                        });
+                                    });
+
+                                    HashTagSearchButton.addEventListener('click', function () {
+                                        textKey = HashTagSearch.value;
+                                        binKey = web3StringToBytes32(textKey);
+                                        TWTRInstance.getNumTagPosts(binKey).then(function (res) {
+                                            var numMatches = res[0];
+                                            // To Get Chronologically, use recursion instead of loop
+                                            allPosts = [];
+                                            
+                                            getTweets(binKey, numMatches);                                                                                                                                    
+                                        });
+                                    });
+                                    
+                                    async function getTweets(binKey, numMatches){
+                                        await getAllTweetsNewToOld(binKey, numMatches);                                           
+                                                for (i = 0; i < allPosts.length; i++){
+                                                    alert("Index: " + i + " Text: " + allPosts[i].text + " address: " + allPosts[i].address);
+                                                }
+                                                updateFeed();
+                                    }
+                                    async function getAllTweetsNewToOld (key, number){
+                                        number --;
+                                        await TWTRInstance.getPostByHashtag(number, key).then(function(res){
+                                            thisPost = res[0];
+                                            thisAddress = res[1];
+                                            thisTPost = new Object();
+                                            thisTPost.address = thisAddress;
+                                            thisTPost.text = thisPost;
+                                            allPosts.push(thisTPost);                                            
+                                        }); 
+                                        if (number > 0){ 
+                                            await getAllTweetsNewToOld(key, number);
+                                        }
+                                    }
+                                                                                                                                                                                                                      
+                                    UserSearchButton.addEventListener('click', function () {
+                                        textKey = UserSearch.value;
+                                        TWTRInstance.getNumUserPosts(textKey).then(function (res) {
+                                            var numMatches = res[0];
+                                            // To Get Chronologically, use recursion instead of loop
+                                            allPosts = [];
+                                            
+                                            getUserTweets(textKey, numMatches);                                                                                                                                    
+                                        });
+                                    });
+                                    
+                                    async function getUserTweets(textKey, numMatches){
+                                        await getUserTweetsNewToOld(textKey, numMatches);
+                                                alert("return successful: " + allPosts.length);                                           
+                                                for (i = 0; i < allPosts.length; i++){
+                                                    alert("Index: " + i + " Text: " + allPosts[i].text + " address: " + allPosts[i].address);
+                                                }
+                                                updateFeed();
+                                    }
+                                    async function getUserTweetsNewToOld (key, number){
+                                        number --;                                        
+                                        await TWTRInstance.getPostByUser(number, key).then(function(res){
+                                            thisPost = res[0];
+                                            alert (thisPost);
+                                            thisAddress = key;
+                                            thisTPost = new Object();
+                                            thisTPost.address = thisAddress;
+                                            thisTPost.text = thisPost;
+                                            allPosts.push(thisTPost);                                            
+                                        }); 
+                                        if (number > 0){ 
+                                            await getUserTweetsNewToOld(key, number);
+                                        }
+                                    }
+                                    
+                                    function updateFeed(){
+                                        numTweets = allPosts.length;
+                                        if (numTweets > MAX_DISP_TWEET)
+                                            numTweets = MAX_DISP_TWET;
+                                        TWT1.style.visibility='hidden';
+                                        TWT2.style.visibility='hidden';
+                                        TWT3.style.visibility='hidden';
+                                        TWT4.style.visibility='hidden';
+                                        TWT5.style.visibility='hidden';
+                                        for(i = 0; i < numTweets; i++){
+                                            addy = allPosts[i].address;
+                                            post = allPosts[i].text;
+                                            switch(i){
+                                                case 0:
+                                                    UN1.innerHTML = addy; TXT1.innerHTML = post;
+                                                    TWT1.style.visibility='visible';
+                                                    break;
+                                                case 1:
+                                                    UN2.innerHTML = addy; TXT2.innerHTML = post;
+                                                    TWT2.style.visibility='visible';  
+                                                    break;
+                                                case 2:
+                                                    UN3.innerHTML = addy; TXT3.innerHTML = post;
+                                                    TWT3.style.visibility='visible';   
+                                                    break;
+                                                case 3:
+                                                    UN4.innerHTML = addy; TXT4.innerHTML = post;
+                                                    TWT4.style.visibility='visible';   
+                                                    break;
+                                                case 4:
+                                                    UN5.innerHTML = addy; TXT5.innerHTML = post;
+                                                    TWT5.style.visibility='visible';   
+                                                    break;
+                                            }
+                                        }
+                                    }
+                                }
+                            });
+                        }, 200);
+
+                    });
+
+                });
+            }
+        </script>
+
+    </body>
+</html>
